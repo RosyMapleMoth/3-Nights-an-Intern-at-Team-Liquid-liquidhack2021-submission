@@ -1,0 +1,11 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 41: invalid syntax
+    url = https://discord.com/api/webhooks/906723323747135488/uvCV67O9azqbBsuBEWbi5vl9oBrRDg2oBIuOtK_uVyIqu17KS-VdiimJ6ldw8c1qC097
+                ^
+    
+
+Ren'Py Version: Ren'Py 7.4.10.2178
+Sat Nov  6 18:56:36 2021

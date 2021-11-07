@@ -1,0 +1,74 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 33, in script
+    call screen creative_writing_minigame_displayable with dissolve
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/minigames/creative_writing_displayable.rpy", line 9, in execute
+    screen creative_writing_minigame_displayable():
+  File "game/minigames/creative_writing_displayable.rpy", line 9, in execute
+    screen creative_writing_minigame_displayable():
+  File "game/minigames/creative_writing_displayable.rpy", line 19, in execute
+    $ player_name = renpy.input("What is your name, Magical Boy?")
+  File "game/minigames/creative_writing_displayable.rpy", line 19, in <module>
+    $ player_name = renpy.input("What is your name, Magical Boy?")
+Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
+Stack was <Layer: u'transient'>
+<Many: <Fixed at 4b2e930>>
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 33, in script
+    call screen creative_writing_minigame_displayable with dissolve
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/exports.py", line 3134, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3315, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3735, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3735, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/minigames/creative_writing_displayable.rpy", line 9, in execute
+    screen creative_writing_minigame_displayable():
+  File "game/minigames/creative_writing_displayable.rpy", line 9, in execute
+    screen creative_writing_minigame_displayable():
+  File "game/minigames/creative_writing_displayable.rpy", line 19, in execute
+    $ player_name = renpy.input("What is your name, Magical Boy?")
+  File "game/minigames/creative_writing_displayable.rpy", line 19, in <module>
+    $ player_name = renpy.input("What is your name, Magical Boy?")
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/exports.py", line 937, in input
+    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ui.py", line 292, in interact
+    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was " + ('\n'.join([str(item) for item in stack])))
+Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
+Stack was <Layer: u'transient'>
+<Many: <Fixed at 4b2e930>>
+
+Windows-10-10.0.19041
+Ren'Py 7.4.10.2178
+LiquidHacks2021 1.0
+Sat Nov  6 18:47:01 2021
