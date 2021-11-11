@@ -50,7 +50,7 @@ label start:
     # Temporarily
     python:
         import requests
-        url = 'https://discord.com/api/webhooks/906723323747135488/uvCV67O9azqbBsuBEWbi5vl9oBrRDg2oBIuOtK_uVyIqu17KS-VdiimJ6ldw8c1qC097'
+        url = WEBHOOK_URL_HERE
         data = {"content": myText}
         result = requests.post(url, json = data)
 
