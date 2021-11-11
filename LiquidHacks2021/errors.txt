@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 726: u'padding' is not a keyword argument or valid child for the hbox statement.
-    padding 100
-           ^
+File "game/minigames/creative_writing_displayable.rpy", line 18: u'add' is not a keyword argument or valid child for the add statement.
+    add img_btn_submit_tweet:
+       ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Wed Nov 10 17:32:41 2021
+Thu Nov 11 02:04:11 2021

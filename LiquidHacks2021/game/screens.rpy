@@ -305,28 +305,32 @@ screen navigation():
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            #textbutton _("History") action ShowMenu("history")
+            textbutton _("Continue") action Return()
 
+            null height (2 * gui.pref_spacing)
+            
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        #textbutton _("Preferences") action ShowMenu("preferences")
 
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
         elif not main_menu:
+            null height (2 * gui.pref_spacing)
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        #textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+            #textbutton _("Help") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
@@ -473,10 +477,11 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    textbutton _("Return"):
-        style "return_button"
-
-        action Return()
+    # textbutton _("{b}Continue Game{/b}"):
+    #     style "return_button"
+    #     #style "custom_return_frame"
+    #
+    #     action Return()
 
     label title
 
@@ -495,6 +500,16 @@ style game_menu_label is gui_label
 style game_menu_label_text is gui_label_text
 
 style return_button is navigation_button
+
+style custom_return_frame:
+    #background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    xpadding 15
+    ypadding 15
+    text_align 0.5
+    xpos 25
+    ypos 600
+
+
 style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:

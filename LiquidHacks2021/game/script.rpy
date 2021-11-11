@@ -1,10 +1,12 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# Define Characters Below
+define janet = Character("Janet")
 
-define e = Character("Eileen")
+# Define Settings
+define gui.namebox_borders = Borders(5, 5, 5, 5)
 
+# Set up TTS
 init python:
     if renpy.windows:
         config.tts_voice = "Zira"
@@ -13,45 +15,42 @@ init python:
     elif renpy.linux:
         config.tts_voice = "english_rp"
 
-# The game starts here.
 
+# The game starts below.
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    call screen preferences with dissolve
 
     scene bg room
+    show zoe neutral at center with dissolve:
+        zoom 0.5
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    janet "Effective marketing campaigns and copywriting are all about being a good storyteller!"
 
-    # show eileen happy
-
-    # These display lines of dialogue.
-
-    define gui.text_size = 15
-
-    "My qualifications for running Team Liquids social media team? Oh honey, I run the entire internet. Why do you think cat videos are so popular on your tiktok feed? The only thing bigger than frogs on the internet are cats. Mmmmeow. "
-
-    e "Okay, time for you to write your own story!"
-    e "In less than or equal to 200 characters, write about prompt x!"
-
-    # This ends the game.
+    janet "It's about creating compelling narratives. Fun engagement about eSports teams, mascots, and more to build unique branding."
+    janet "Why don't you give it a shot? I'll give you a prompt, try to craft something in 250 characters or less."
+    janet "You can only get better at writing if you practice! Give it your best!"
 
     # shows screen with dissolve, then fades out with dissolve and shows return value
     call screen creative_writing_minigame_displayable with dissolve
-    with pixellate
-    $ myText = _return
+    with dissolve
+    $ tweet_copy = _return
 
-    "You wrote [myText], huh? Let's webhook you to Discord while we wait for Twitter Dev approval."
+    janet "Wow!! '[tweet_copy]' sounds amazing."
+    janet "Do you mind if we share your work on our fan Twitter?"
 
-    # Temporarily
-    python:
-        import requests
-        url = WEBHOOK_URL_HERE
-        data = {"content": myText}
-        result = requests.post(url, json = data)
+    menu:
+        "Go ahead!":
+            # Tweet from bot TL_BlueBae via IFTTT
+            python:
+                import requests
+                url = 'https://maker.ifttt.com/trigger/TL_Webhook/with/key/cHoM4JW3d286vn-TZX_siJ'
+                data = {"value1": tweet_copy}
+                result = requests.post(url, json = data)
+            janet "Woohoo! You can find your writing on {b}{a=https://twitter.com/TL_BlueBae}Twitter @TL_BlueBae{/a}.{/b}"
+            janet "You can also read what other people have written! I wouldn't be surprised if Vivian was the first to comment under your Tweet. She really loves storytelling and writing!"
+
+        "No thanks.":
+            janet "No worries. If you'd ever like to share later, just let me know!"
+            janet "If you'd like to see what others have written and get inspired, visit {a=https://twitter.com/TL_BlueBae}Twitter @TL_BlueBae{/a}."
 
     return
