@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+LiquidHacks2021/traceback.txt
+LiquidHacks2021/log.txt
+LiquidHacks2021/errors.txt

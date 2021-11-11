@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/minigames/creative_writing_displayable.rpy", line 18: u'add' is not a keyword argument or valid child for the add statement.
+    add img_btn_submit_tweet:
+       ^
+
+Ren'Py Version: Ren'Py 7.4.10.2178
+Thu Nov 11 02:04:11 2021
