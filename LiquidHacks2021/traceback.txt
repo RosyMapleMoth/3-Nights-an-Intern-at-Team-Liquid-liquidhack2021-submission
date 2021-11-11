@@ -1,74 +1,84 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 33, in script
-    call screen creative_writing_minigame_displayable with dissolve
-  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/minigames/creative_writing_displayable.rpy", line 9, in execute
-    screen creative_writing_minigame_displayable():
-  File "game/minigames/creative_writing_displayable.rpy", line 9, in execute
-    screen creative_writing_minigame_displayable():
-  File "game/minigames/creative_writing_displayable.rpy", line 19, in execute
-    $ player_name = renpy.input("What is your name, Magical Boy?")
-  File "game/minigames/creative_writing_displayable.rpy", line 19, in <module>
-    $ player_name = renpy.input("What is your name, Magical Boy?")
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was <Layer: u'transient'>
-<Many: <Fixed at 4b2e930>>
+After initialization, but before game start.
+  File "game/screens.rpy", line 715, in prepare_screen
+    screen preferences():
+  File "game/screens.rpy", line 715, in prepare
+    screen preferences():
+  File "game/screens.rpy", line 719, in prepare
+    use game_menu(_("Preferences"), scroll="viewport"):
+  File "game/screens.rpy", line 719, in prepare
+    use game_menu(_("Preferences"), scroll="viewport"):
+  File "game/screens.rpy", line 721, in prepare
+    vbox:
+  File "game/screens.rpy", line 721, in prepare
+    vbox:
+  File "game/screens.rpy", line 739, in prepare
+    hbox:
+  File "game/screens.rpy", line 739, in prepare
+    hbox:
+  File "game/screens.rpy", line 754, in prepare
+    vbox:
+  File "game/screens.rpy", line 754, in prepare
+    vbox:
+  File "game/screens.rpy", line 756, in prepare
+    textbutton _("Small") action Preference("font line spacng", 0.75)
+  File "game/screens.rpy", line 756, in prepare
+    textbutton _("Small") action Preference("font line spacng", 0.75)
+  File "game/screens.rpy", line 756, in <module>
+    textbutton _("Small") action Preference("font line spacng", 0.75)
+  File "renpy/common/00preferences.rpy", line 553, in Preference
+    rv = get()
+  File "renpy/common/00preferences.rpy", line 551, in get
+    raise Exception("Preference(%r, %r) is unknown." % (name , value))
+Exception: Preference(u'font line spacng', 0.75) is unknown.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 33, in script
-    call screen creative_writing_minigame_displayable with dissolve
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2015, in execute
-    self.call("execute")
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2003, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/exports.py", line 3134, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3315, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3735, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 436, in visit_all
-    callback(self)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3735, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 447, in per_interact
-    self.update()
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 637, in update
-    self.screen.function(**self.scope)
-  File "game/minigames/creative_writing_displayable.rpy", line 9, in execute
-    screen creative_writing_minigame_displayable():
-  File "game/minigames/creative_writing_displayable.rpy", line 9, in execute
-    screen creative_writing_minigame_displayable():
-  File "game/minigames/creative_writing_displayable.rpy", line 19, in execute
-    $ player_name = renpy.input("What is your name, Magical Boy?")
-  File "game/minigames/creative_writing_displayable.rpy", line 19, in <module>
-    $ player_name = renpy.input("What is your name, Magical Boy?")
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/exports.py", line 937, in input
-    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ui.py", line 292, in interact
-    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was " + ('\n'.join([str(item) for item in stack])))
-Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
-Stack was <Layer: u'transient'>
-<Many: <Fixed at 4b2e930>>
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/main.py", line 652, in main
+    run(restart)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/main.py", line 97, in run
+    renpy.display.screen.prepare_screens()
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 955, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 715, in prepare_screen
+    screen preferences():
+  File "game/screens.rpy", line 715, in prepare
+    screen preferences():
+  File "game/screens.rpy", line 719, in prepare
+    use game_menu(_("Preferences"), scroll="viewport"):
+  File "game/screens.rpy", line 719, in prepare
+    use game_menu(_("Preferences"), scroll="viewport"):
+  File "game/screens.rpy", line 721, in prepare
+    vbox:
+  File "game/screens.rpy", line 721, in prepare
+    vbox:
+  File "game/screens.rpy", line 739, in prepare
+    hbox:
+  File "game/screens.rpy", line 739, in prepare
+    hbox:
+  File "game/screens.rpy", line 754, in prepare
+    vbox:
+  File "game/screens.rpy", line 754, in prepare
+    vbox:
+  File "game/screens.rpy", line 756, in prepare
+    textbutton _("Small") action Preference("font line spacng", 0.75)
+  File "game/screens.rpy", line 756, in prepare
+    textbutton _("Small") action Preference("font line spacng", 0.75)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/screens.rpy", line 756, in <module>
+    textbutton _("Small") action Preference("font line spacng", 0.75)
+  File "renpy/common/00preferences.rpy", line 553, in Preference
+    rv = get()
+  File "renpy/common/00preferences.rpy", line 551, in get
+    raise Exception("Preference(%r, %r) is unknown." % (name , value))
+Exception: Preference(u'font line spacng', 0.75) is unknown.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
 LiquidHacks2021 1.0
-Sat Nov  6 18:47:01 2021
+Wed Nov 10 17:43:03 2021

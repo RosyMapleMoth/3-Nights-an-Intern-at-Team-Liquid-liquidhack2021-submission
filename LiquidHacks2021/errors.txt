@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 41: invalid syntax
-    url = https://discord.com/api/webhooks/906723323747135488/uvCV67O9azqbBsuBEWbi5vl9oBrRDg2oBIuOtK_uVyIqu17KS-VdiimJ6ldw8c1qC097
-                ^
-    
+File "game/screens.rpy", line 726: u'padding' is not a keyword argument or valid child for the hbox statement.
+    padding 100
+           ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Sat Nov  6 18:56:36 2021
+Wed Nov 10 17:32:41 2021

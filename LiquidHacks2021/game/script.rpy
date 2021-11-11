@@ -5,6 +5,13 @@
 
 define e = Character("Eileen")
 
+init python:
+    if renpy.windows:
+        config.tts_voice = "Zira"
+    elif renpy.macintosh:
+        config.tts_voice = "Samantha"
+    elif renpy.linux:
+        config.tts_voice = "english_rp"
 
 # The game starts here.
 
@@ -24,6 +31,10 @@ label start:
 
     # These display lines of dialogue.
 
+    define gui.text_size = 15
+
+    "My qualifications for running Team Liquids social media team? Oh honey, I run the entire internet. Why do you think cat videos are so popular on your tiktok feed? The only thing bigger than frogs on the internet are cats. Mmmmeow. "
+
     e "Okay, time for you to write your own story!"
     e "In less than or equal to 200 characters, write about prompt x!"
 
@@ -39,7 +50,7 @@ label start:
     # Temporarily
     python:
         import requests
-        url = {'webhook_url'}
+        url = 'https://discord.com/api/webhooks/906723323747135488/uvCV67O9azqbBsuBEWbi5vl9oBrRDg2oBIuOtK_uVyIqu17KS-VdiimJ6ldw8c1qC097'
         data = {"content": myText}
         result = requests.post(url, json = data)
 

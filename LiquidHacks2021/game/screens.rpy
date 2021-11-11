@@ -722,28 +722,54 @@ screen preferences():
 
             hbox:
                 box_wrap True
-
-                if renpy.variant("pc") or renpy.variant("web"):
-
-                    vbox:
-                        style_prefix "radio"
-                        label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                spacing 100
 
                 vbox:
-                    style_prefix "radio"
-                    label _("Rollback Side")
-                    textbutton _("Disable") action Preference("rollback side", "disable")
-                    textbutton _("Left") action Preference("rollback side", "left")
-                    textbutton _("Right") action Preference("rollback side", "right")
+                    label _("Display")
+                    textbutton _("Window") action Preference("display", "window")
+                    textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
                 vbox:
-                    style_prefix "check"
-                    label _("Skip")
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    label _("Text to Speech")
+                    textbutton _("Enabled") action Preference("self voicing", "enable")
+                    textbutton _("Disabled") action Preference("self voicing", "disable")
+
+            null height (4 * gui.pref_spacing)
+
+            hbox:
+                box_wrap True
+                spacing 100
+
+                vbox:
+                    label _("Accessibility Fonts")
+                    textbutton _("Deja Vu Sans") action Preference("font transform", "dejavusans")
+                    textbutton _("Open Dyslexic") action Preference("font transform", "opendyslexic")
+
+                vbox:
+                    label _("Font Size")
+                    textbutton _("Small") action Preference("font size", 0.75)
+                    textbutton _("Medium") action Preference("font size", 1.0)
+                    textbutton _("Large") action Preference("font size", 1.25)
+
+                vbox:
+                    label _("Font Line Spacing")
+                    textbutton _("Small") action Preference("font line spacing", 0.75)
+                    textbutton _("Medium") action Preference("font line spacing", 1.0)
+                    textbutton _("Large") action Preference("font line spacing", 1.25)
+
+                # vbox:
+                #     style_prefix "radio"
+                #     label _("Rollback Side")
+                #     textbutton _("Disable") action Preference("rollback side", "disable")
+                #     textbutton _("Left") action Preference("rollback side", "left")
+                #     textbutton _("Right") action Preference("rollback side", "right")
+
+                # vbox:
+                #     style_prefix "check"
+                #     label _("Skip")
+                #     textbutton _("Unseen Text") action Preference("skip", "toggle")
+                #     textbutton _("After Choices") action Preference("after choices", "toggle")
+                #     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -798,6 +824,16 @@ screen preferences():
                         textbutton _("Mute All"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
+
+            #hbox:
+                #box_wrap True
+
+                #textbutton _("Text to Speech Narration"):
+                    #action Preference("self voicing", "toggle")
+                    #action Preference("self voicing", "toggle")
+
+                    #Preference("font transform", "opendyslexic")
+                    #Preference("font transform", "dejavusans")
 
 
 style pref_label is gui_label
@@ -869,6 +905,7 @@ style slider_button_text:
 
 style slider_vbox:
     xsize 450
+
 
 
 ## History screen ##############################################################
