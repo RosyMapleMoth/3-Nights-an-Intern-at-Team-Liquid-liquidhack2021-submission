@@ -306,9 +306,10 @@ label start:
 
         zoe "{i}Well... its not easy,{/i} but anyone can do it if they practice."
 
-        zoe "Why dob't we try it now!"
+        zoe "Why don't we try it now!"
 
         call screen meme_maker_minigame_displayable
+        play music minigametrack2 fadeout 1.0 fadein 1.0
 
         zoe "Oh wow you did a purrfect job making that meme!"
 
