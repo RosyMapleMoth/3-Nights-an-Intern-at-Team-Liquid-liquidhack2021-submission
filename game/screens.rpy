@@ -104,6 +104,7 @@ screen say(who, what):
         if who is not None:
 
             window:
+                yoffset 8
                 id "namebox"
                 style "namebox"
                 text who id "who"
@@ -863,6 +864,7 @@ screen preferences():
 
                 vbox:
                     label _("Accessibility Fonts")
+                    textbutton _("Sylfaen") action Preference("font transform", None)
                     textbutton _("Deja Vu Sans") action Preference("font transform", "dejavusans")
                     textbutton _("Open Dyslexic") action Preference("font transform", "opendyslexic")
 
@@ -874,9 +876,9 @@ screen preferences():
 
                 vbox:
                     label _("Font Line Spacing")
-                    textbutton _("Small") action Preference("font line spacing", 0.75)
+                    textbutton _("Small") action Preference("font line spacing", 0.8)
                     textbutton _("Medium") action Preference("font line spacing", 1.0)
-                    textbutton _("Large") action Preference("font line spacing", 1.25)
+                    textbutton _("Large") action Preference("font line spacing", 1.2)
 
                 # vbox:
                 #     style_prefix "radio"
