@@ -4,7 +4,6 @@ define IMG_DIR = 'images/'
 
 # IMAGES
 define img_bg_tweet = THIS_PATH + IMG_DIR + "tweet_blank_full.jpg"
-define pov = Character("[povname]")
 
 # MINIGAME
 screen creative_writing_minigame_displayable():

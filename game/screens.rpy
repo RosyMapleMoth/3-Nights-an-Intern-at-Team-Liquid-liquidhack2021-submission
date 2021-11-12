@@ -223,7 +223,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 270
+    ypos 580
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -232,6 +232,44 @@ style choice_button is default:
     properties gui.button_properties("choice_button")
 
 style choice_button_text is default:
+    properties gui.button_text_properties("choice_button")
+
+## Custom Choice screen ###############################################################
+##
+## This screen is used to display the in-game choices presented by the menu
+## statement. The one parameter, items, is a list of objects, each with caption
+## and action fields.
+##
+## https://www.renpy.org/doc/html/screen_special.html#choice
+
+screen custom_choice(items):
+    style_prefix "custom_choice"
+
+    vbox:
+        for i in items:
+            textbutton i.caption action i.action
+
+
+## When this is true, menu captions will be spoken by the narrator. When false,
+## menu captions will be displayed as empty buttons.
+define config.narrator_menu = True
+
+
+style custom_choice_vbox is vbox
+style custom_choice_button is button
+style custom_choice_button_text is button_text
+
+style custom_choice_vbox:
+    xalign 0.75
+    ypos 800
+    yanchor 0.5
+
+    spacing gui.choice_spacing
+
+style custom_choice_button is default:
+    properties gui.button_properties("choice_button")
+
+style custom_choice_button_text is default:
     properties gui.button_text_properties("choice_button")
 
 
@@ -309,7 +347,7 @@ screen navigation():
             textbutton _("Continue") action Return()
 
             null height (2 * gui.pref_spacing)
-            
+
             textbutton _("Save") action ShowMenu("save")
 
         textbutton _("Load") action ShowMenu("load")
@@ -509,6 +547,13 @@ style custom_return_frame:
     xpos 25
     ypos 600
 
+style custom_mod_frame:
+    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    xpadding 15
+    ypadding 15
+    text_align 0.5
+    xpos 25
+    ypos 600
 
 style return_button_text is navigation_button_text
 
