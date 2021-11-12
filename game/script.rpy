@@ -277,6 +277,7 @@ label start:
         $ must_meet_janet = False
         jump meet_menu
         # CREATIVE WRITING POST FIN --------------------------------------------------------
+
     label meme_maker:
         scene bg slack at top
         with pixellate
@@ -285,10 +286,7 @@ label start:
             zoom 0.5
 
         zoe "I’m Zoe! I’m a cat! I use she/her/they/them/it/its pronouns."
-
-        ## added dialog make sure this is ok
         blue "Whha.. but you're a cat, are you sure you're qualifed?"
-
 
         zoe "Am I qualifed to running Team Liquids social media team?"
         zoe "Oh honey{w}, I run the entire internet."
@@ -310,6 +308,7 @@ label start:
         zoe "Why don't we try it now!"
 
         play music minigametrack2 fadeout 1.0 fadein 1.0
+
         call screen meme_maker_minigame_displayable
 
         zoe "Oh wow, you did a purrfect job making that meme!"
