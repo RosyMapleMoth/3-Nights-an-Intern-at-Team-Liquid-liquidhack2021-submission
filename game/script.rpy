@@ -22,7 +22,7 @@ init python:
 
 # The game starts below.
 label start:
-    play music gamemenu
+    play music gamemenu fadeout 1.0 fadein 1.0
     
     call screen preferences with dissolve
     
@@ -88,7 +88,7 @@ label start:
         yoshi "Are you sure you want to help out being a moderator? It’s challenging stuff!"
 
         show screen moderation_minigame_displayable with dissolve
-        play music moderationminigame
+        play music moderationminigame fadeout 1.0 fadein 1.0
 
         image _user1 = "mod mg user 1.png"  # rickroll naruto
         image _user2 = "mod mg user 2.png"  # future minecraft esports
@@ -225,7 +225,7 @@ label start:
         with pushright
 
         # shows screen with dissolve, then fades out with dissolve and shows return value
-        play music cwminigame
+        play music cwminigame fadeout 1.0 fadein 1.0
         call screen creative_writing_minigame_displayable with dissolve
         $ tweet_copy = _return
 
