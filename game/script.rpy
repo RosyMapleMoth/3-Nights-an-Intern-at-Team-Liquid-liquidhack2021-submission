@@ -22,9 +22,8 @@ init python:
 
 # The game starts below.
 label start:
+    call screen preferences with pixellate
     play music gamemenu fadeout 1.0 fadein 1.0
-
-    call screen preferences with dissolve
 
     scene black with dissolve
 
@@ -285,7 +284,7 @@ label start:
 
             menu():
                 "Let me submit my application right now!!":
-                    janet "Wow, I love your enthusiasm. I'm so glad you had a good time on your internship!")
+                    janet "Wow, I love your enthusiasm. I'm so glad you had a good time on your internship!"
                     janet "Also, Blue?"
                     pause
                     janet "I just want you I'm really proud of you. You're not just a cute mastcot to me."
@@ -301,7 +300,7 @@ label start:
                     pause
                     "{i}3 Nights an Intern at Team Liquid{/i} was made by Bellbellum, Ocarune, Brekcut, and Moth for LiquidHacks 2.0. Thanks for playing!"
 
-                "Not right now, maybe later."
+                "Not right now, maybe later.":
                     janet "Ah, okay, no worries! If you ever want someone to review your resume, we sometimes hold job fairs and other events!"
                     janet "Alright, I'm off for a TFT break but I'll see you later. (PS Vex with Bramble is broken)"
                     hide janet with dissolve

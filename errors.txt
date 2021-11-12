@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 65: Line is indented, but the preceding define statement statement does not expect a block. Please check this line's indentation.
-    define config.main_menu_music = "menumusic.ogg"
+File "game/screens.rpy", line 388: Line is indented, but the preceding style statement does not expect a block. Please check this line's indentation.
+    text_align 0.5
     ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Fri Nov 12 01:01:02 2021
+Fri Nov 12 12:12:52 2021
