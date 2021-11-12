@@ -1,38 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00defaults.rpy", line 65, in script
-    init 1500 python hide:
-  File "renpy/common/00defaults.rpy", line 65, in script
-    init 1500 python hide:
-  File "renpy/common/00defaults.rpy", line 65, in <module>
-    init 1500 python hide:
-  File "renpy/common/00defaults.rpy", line 123, in _execute_python_hide
-    raise Exception(error)
-Exception: Preference font_line_spacing has wrong type. 1 is not of type <type 'float'>.
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 469, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/main.py", line 550, in main
-    renpy.game.context().run(node)
-  File "renpy/common/00defaults.rpy", line 65, in script
-    init 1500 python hide:
-  File "renpy/common/00defaults.rpy", line 65, in script
-    init 1500 python hide:
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
   File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/00defaults.rpy", line 65, in <module>
-    init 1500 python hide:
-  File "renpy/common/00defaults.rpy", line 123, in _execute_python_hide
-    raise Exception(error)
-Exception: Preference font_line_spacing has wrong type. 1 is not of type <type 'float'>.
+  File "renpy/common/00keymap.rpy", line 469, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/loadsave.py", line 394, in save
+    roots = renpy.game.log.freeze(None)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2142, in freeze
+    self.complete(False)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 1726, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
 3 Nights an Intern @ Team Liquid 1.0
-Fri Nov 12 13:37:04 2021
+Fri Nov 12 15:02:02 2021
