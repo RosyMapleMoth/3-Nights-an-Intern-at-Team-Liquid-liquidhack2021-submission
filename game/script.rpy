@@ -22,8 +22,10 @@ init python:
 
 # The game starts below.
 label start:
+    play music gamemenu fadeout 1.0 fadein 1.0
+    
     call screen preferences with dissolve
-
+    
     scene black with dissolve
 
     show text "\"There's a reason why Team Liquid hires so many remote employees... \
@@ -86,6 +88,7 @@ label start:
         yoshi "Are you sure you want to help out being a moderator? It’s challenging stuff!"
 
         show screen moderation_minigame_displayable with dissolve
+        play music moderationminigame fadeout 1.0 fadein 1.0
 
         image _user1 = "mod mg user 1.png"  # rickroll naruto
         image _user2 = "mod mg user 2.png"  # future minecraft esports
@@ -206,7 +209,7 @@ label start:
     label creative_post_minigame:
         scene bg slack at top
         with transition_circle_iris_out
-
+    
         show janet smiling at center with dissolve:
             zoom 0.5
 
@@ -222,6 +225,7 @@ label start:
         with pushright
 
         # shows screen with dissolve, then fades out with dissolve and shows return value
+        play music cwminigame fadeout 1.0 fadein 1.0
         call screen creative_writing_minigame_displayable with dissolve
         $ tweet_copy = _return
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 36: expected statement.
-    "\"I have real legs!\" ~ Gamerhcp" with dissolve:
-                                       ^
+File "game/options.rpy", line 65: Line is indented, but the preceding define statement statement does not expect a block. Please check this line's indentation.
+    define config.main_menu_music = "menumusic.ogg"
+    ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Thu Nov 11 21:11:06 2021
+Fri Nov 12 01:01:02 2021
