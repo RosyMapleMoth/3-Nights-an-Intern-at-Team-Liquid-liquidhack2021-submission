@@ -8,6 +8,7 @@ __pycache__/
 
 # Renpy
 game/saves/*
+game/.vscode
 errors.txt
 log.txt
 traceback.txt
