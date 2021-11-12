@@ -1,42 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 212, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 514, in _execute_python_hide
-    renpy.load("_reload-2")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "renpy/common/00defaults.rpy", line 65, in script
+    init 1500 python hide:
+  File "renpy/common/00defaults.rpy", line 65, in script
+    init 1500 python hide:
+  File "renpy/common/00defaults.rpy", line 65, in <module>
+    init 1500 python hide:
+  File "renpy/common/00defaults.rpy", line 123, in _execute_python_hide
+    raise Exception(error)
+Exception: Preference font_line_spacing has wrong type. 1 is not of type <type 'float'>.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 212, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "renpy/ast.py", line 928, in execute
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/main.py", line 550, in main
+    renpy.game.context().run(node)
+  File "renpy/common/00defaults.rpy", line 65, in script
+    init 1500 python hide:
+  File "renpy/common/00defaults.rpy", line 65, in script
+    init 1500 python hide:
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2245, in py_exec_bytecode
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 514, in _execute_python_hide
-    renpy.load("_reload-2")
-  File "renpy/loadsave.py", line 771, in load
-    log.unfreeze(roots, label="_after_load")
-  File "renpy/python.py", line 2200, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "renpy/python.py", line 2014, in rollback
-    self.load_failed()
-  File "renpy/python.py", line 1932, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "renpy/common/00defaults.rpy", line 65, in <module>
+    init 1500 python hide:
+  File "renpy/common/00defaults.rpy", line 123, in _execute_python_hide
+    raise Exception(error)
+Exception: Preference font_line_spacing has wrong type. 1 is not of type <type 'float'>.
 
-Windows-10-10.0.22489
+Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
-LiquidHacks2021 1.0
-Fri Nov 12 01:22:27 2021
+3 Nights an Intern @ Team Liquid 1.0
+Fri Nov 12 13:37:04 2021
