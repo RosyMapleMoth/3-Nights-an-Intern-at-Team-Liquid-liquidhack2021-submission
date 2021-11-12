@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # Renpy
-game/saves/*
+game/saves/
 game/.vscode
 errors.txt
 log.txt
