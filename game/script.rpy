@@ -73,6 +73,8 @@ label start:
                 jump moderation_minigame
             "Janet (Marketing & Writing)" if must_meet_janet:
                 jump creative_post_minigame
+            "Meme Mini game test": 
+                jump meme_maker
             "I've met everyone!" if conclusion_activated:
                 jump conclusion
 
@@ -277,37 +279,47 @@ label start:
         # CREATIVE WRITING POST FIN --------------------------------------------------------
 
 
+    label meme_maker:
+        scene bg slack at top
+        with pixellate
+
+
+        "Tester" "Hello, this is so very exciting today we will be making a meme" 
+
+        call screen meme_maker_minigame_displayable
+
+
         # CONCLUSION BEGINS --------------------------------------------------------
-        label conclusion:
-            janet "Oh wow you've met a lot of people in your 3 days as an intern! I hope you learned a lot and had fun talking with some of the other departments."
-            janet "You've done such a great job. You should apply on our {a=https://careers.teamliquid.com/}careers page{/a} so you can become #PaidBySteve too!"
+    label conclusion:
+        janet "Oh wow you've met a lot of people in your 3 days as an intern! I hope you learned a lot and had fun talking with some of the other departments."
+        janet "You've done such a great job. You should apply on our {a=https://careers.teamliquid.com/}careers page{/a} so you can become #PaidBySteve too!"
 
-            menu():
-                "Let me submit my application right now!!":
-                    janet "Wow, I love your enthusiasm. I'm so glad you had a good time on your internship!"
-                    janet "Also, Blue?"
-                    pause
-                    janet "I just want you I'm really proud of you. You're not just a cute mastcot to me."
-                    janet "You're so smart, and I think you can do anything you put your mind to."
-                    janet "It's okay to not know what you want to do, and I'm glad you got to try out new things and find something new you're passionate about."
-                    pause
-                    show text "Janet sends you an e-hug gif..." with dissolve
-                    pause 3
-                    with dissolve
+        menu():
+            "Let me submit my application right now!!":
+                janet "Wow, I love your enthusiasm. I'm so glad you had a good time on your internship!"
+                janet "Also, Blue?"
+                pause
+                janet "I just want you I'm really proud of you. You're not just a cute mastcot to me."
+                janet "You're so smart, and I think you can do anything you put your mind to."
+                janet "It's okay to not know what you want to do, and I'm glad you got to try out new things and find something new you're passionate about."
+                pause
+                show text "Janet sends you an e-hug gif..." with dissolve
+                pause 3
+                with dissolve
 
-                    hide text
-                    "Congrats on beating the game!"
-                    pause
-                    "{i}3 Nights an Intern at Team Liquid{/i} was made by Bellbellum, Ocarune, Brekcut, and Moth for LiquidHacks 2.0. Thanks for playing!"
+                hide text
+                "Congrats on beating the game!"
+                pause
+                "{i}3 Nights an Intern at Team Liquid{/i} was made by Bellbellum, Ocarune, Brekcut, and Moth for LiquidHacks 2.0. Thanks for playing!"
 
-                "Not right now, maybe later.":
-                    janet "Ah, okay, no worries! If you ever want someone to review your resume, we sometimes hold job fairs and other events!"
-                    janet "Alright, I'm off for a TFT break but I'll see you later. (PS Vex with Bramble is broken)"
-                    hide janet with dissolve
+            "Not right now, maybe later.":
+                janet "Ah, okay, no worries! If you ever want someone to review your resume, we sometimes hold job fairs and other events!"
+                janet "Alright, I'm off for a TFT break but I'll see you later. (PS Vex with Bramble is broken)"
+                hide janet with dissolve
 
-                    # show Sarah's video
+                # show Sarah's video
 
-                    # more text here
+                # more text here
 
-        # CONCLUSION FIN --------------------------------------------------------
+    # CONCLUSION FIN --------------------------------------------------------
 return
