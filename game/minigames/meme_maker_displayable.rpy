@@ -16,6 +16,7 @@ define variable = ""
 # MINIGAME
 screen meme_maker_minigame_displayable():
     default meme_maker_displayable = MemeMakerDisplayable()
+    key ["`"] action Screenshot()
 
     add Solid('#000')
     add meme_maker_displayable
@@ -27,15 +28,14 @@ screen meme_maker_minigame_displayable():
              color '#fff'
 
     vbox:
-        xpos 50 ypos 50 spacing 100 
+        xpos 50 ypos 50 spacing 100
         text 'Activity: Create a meme for our social media presense, click on the left or right side of the screen to change images, type out your caption when ready!':
              color '#fff'
     viewport:
-        ypos 550
+        ypos 450
         xpos 400
-        xysize 400, 200
-        input color "#fff" xmaximum 700 ymaximum 300  length 400 text_align 0.5 outlines [ (absolute(1), "#000", absolute(0), absolute(0)) ]
-
+        xsize 700
+        input color "#fff" xmaximum 700 ymaximum 300  length 400 text_align 0.5 outlines [ (absolute(1), "#000", absolute(0), absolute(0)) ] size 52
 
 
 
@@ -49,13 +49,13 @@ init python:
             self.hasFinished = False;
             self.curimage = 0
             x,y = renpy.get_physical_size()
-        
+
             self.images = []
             self.imagesize = []
             for x in range(0,7):
                 self.images.append(Image(THIS_PATH + IMG_DIR + MEM_IMG_NAME + str(x+1) + '.png', xcenter=600, ycenter=400,))
                 Transform(self.images[x], 0.5)
-        
+
 
         def render(self, width, height, st, at):
             render = renpy.Render(width, height)
@@ -82,4 +82,3 @@ init python:
                     self.curimage = 6
                 else:
                     self.curimage = self.curimage - 1
-            

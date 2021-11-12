@@ -1,36 +1,52 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00keymap.rpy", line 469, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 469, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "game/script.rpy", line 311, in script
+    call screen meme_maker_minigame_displayable
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+Exception: Invalid key specifier F1
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 469, in script
-    python hide:
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 928, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2245, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 469, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/loadsave.py", line 394, in save
-    roots = renpy.game.log.freeze(None)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2142, in freeze
-    self.complete(False)
-  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 1726, in complete
-    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "game/script.rpy", line 311, in script
+    call screen meme_maker_minigame_displayable
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2015, in execute
+    self.call("execute")
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 2003, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/statements.py", line 278, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/exports.py", line 3134, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 3315, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/core.py", line 4155, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/layout.py", line 1100, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/layout.py", line 1100, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/layout.py", line 1100, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/screen.py", line 727, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/layout.py", line 1100, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/behavior.py", line 468, in event
+    if map_event(ev, name):
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/behavior.py", line 232, in map_event
+    check_code = eval("lambda ev : " + compile_event(keysym, True), globals())
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/display/behavior.py", line 139, in compile_event
+    raise Exception("Invalid key specifier %s" % key)
+Exception: Invalid key specifier F1
 
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
 3 Nights an Intern @ Team Liquid 1.0
-Fri Nov 12 15:02:02 2021
+Fri Nov 12 15:34:37 2021
