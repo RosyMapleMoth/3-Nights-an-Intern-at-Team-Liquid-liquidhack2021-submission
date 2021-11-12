@@ -68,6 +68,8 @@ label start:
                 jump moderation_minigame
             "Janet (Marketing & Writing)":
                 jump creative_post_minigame
+            "Meme Mini game test":
+                jump meme_maker
 
     # MODERATION MINIGAME --------------------------------------------------------
     label moderation_minigame:
@@ -266,5 +268,16 @@ label start:
 
         jump meet_menu
         # CREATIVE WRITING POST FIN --------------------------------------------------------
+
+
+    label meme_maker:
+        scene bg slack at top
+        with pixellate
+
+
+        "Tester" "Hello, this is so very exciting today we will be making a meme" 
+
+        call screen meme_maker_minigame_displayable
+
 
 return
