@@ -27,15 +27,14 @@ screen meme_maker_minigame_displayable():
              color '#fff'
 
     vbox:
-        xpos 50 ypos 50 spacing 100
-        text 'Activity: Create a meme for our social media presense, press the side arrows to select an image, type out your caption when ready!':
+        xpos 50 ypos 50 spacing 100 
+        text 'Activity: Create a meme for our social media presense, click on the left or right side of the screen to change images, type out your caption when ready!':
              color '#fff'
-
     viewport:
         ypos 550
         xpos 400
         xysize 400, 200
-        input color "#000" xmaximum 700 ymaximum 300  length 400 text_align 0.5
+        input color "#fff" xmaximum 700 ymaximum 300  length 400 text_align 0.5 outlines [ (absolute(1), "#000", absolute(0), absolute(0)) ]
 
 
 
@@ -73,12 +72,12 @@ init python:
             return render
 
         def event(self, ev, x, y, st):
-            if ev.type == pygame.MOUSEBUTTONDOWN and ev.pos[0] < 1750 and ev.pos[0] > 1600 and ev.pos[1] > 300 and ev.pos[1] < 400 :
+            if ev.type == pygame.MOUSEBUTTONDOWN and ev.pos[0] > 800:
                 if (self.curimage >= 6):
                     self.curimage = 0
                 else:
                     self.curimage = self.curimage + 1
-            if ev.type == pygame.MOUSEBUTTONDOWN and ev.pos[0] < 200 and ev.pos[0] > 50 and ev.pos[1] > 300 and ev.pos[1] < 400 :
+            if ev.type == pygame.MOUSEBUTTONDOWN and ev.pos[0] < 800:
                 if (self.curimage <= 0):
                     self.curimage = 6
                 else:
