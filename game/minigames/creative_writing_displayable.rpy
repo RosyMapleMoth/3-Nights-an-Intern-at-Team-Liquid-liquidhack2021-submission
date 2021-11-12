@@ -11,7 +11,7 @@ screen creative_writing_minigame_displayable():
     add Solid('#000')
     add img_bg_tweet:
         xpos 680 ypos 175
-        xalign 0.5
+        #xalign 0.5
 
     add creative_writing_mg_displayable
 
