@@ -309,6 +309,7 @@ label start:
 
         zoe "Why don't we try it now!"
 
+        play music minigametrack2 fadeout 1.0 fadein 1.0
         call screen meme_maker_minigame_displayable
 
         zoe "Oh wow, you did a purrfect job making that meme!"
