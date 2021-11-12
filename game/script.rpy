@@ -3,7 +3,7 @@
 # Define Characters Below
 define janet = Character("Janet")
 define yoshi = Character("Yoshi")
-define blue = Character("Blue")
+define blue = Character("Blue (You)")
 
 # Define Settings
 define gui.namebox_borders = Borders(5, 5, 5, 5)
@@ -24,6 +24,17 @@ init python:
 label start:
     call screen preferences with dissolve
 
+    scene black with dissolve
+
+    show text "\"There's a reason why Team Liquid hires so many remote employees... \
+    \nthey're all centaurs...\"\
+    \n~ Sarah"
+    with dissolve
+    pause 4
+    with dissolve
+
+    "\"I have real legs!\" ~ Gamerhcp" with dissolve
+    hide text
 
     scene bg slack at top
     with transition_circle_iris_out
@@ -37,35 +48,35 @@ label start:
     janet "I'll also introduce you to some of the other awesome people in other teams and you can learn about other jobs here at TL and different careers in Esports."
     janet "We are all about collaboration, cooperation, and fun here so please ask away if you have any questions!"
     janet "Even though you’re going to be working with the education team, I’d encourage you to reach out to other people and ask them about their jobs!"
+    hide janet with dissolve
+
+    blue "\"Thanks Janet! I can't wait to meet everyone.\""
 
     label meet_menu:
-        scene bg slack at top
-        with transition_circle_iris_out
+        scene bg slack at top with transition_circle_iris_out
 
         show janet smiling at center with dissolve:
             zoom 0.5
 
-        janet "Who would you like to meet today?"
+        janet "Alright, who would you like to meet today?"
         menu():
-            "Zoe (Social Media Team)":
+            "Zoe (Social Media)":
                 jump meet_menu
             "Yoshi (Community Management)":
                 jump moderation_minigame
-            "Vivian (Copywriter)":
+            "Janet (Marketing & Writing)":
                 jump creative_post_minigame
-            "SeaGnome (Tournament Manager)":
-                jump meet_menu
 
     # MODERATION MINIGAME --------------------------------------------------------
     label moderation_minigame:
         scene bg slack at top
-        with transition_circle_iris_out
+        with pixellate
 
         show yoshi smiling at center with dissolve:
             zoom 0.5
 
         yoshi "Hiya I’m Yoshi. I use he/him pronouns. You’ve probably seen me hanging around the Team Liquid discord server or on the TL Minecraft server."
-        yoshi "I'm a community manager, so I put together the awesome events Team Liquid hosts. I am by no means the face of Team Liquid, but rather doing a lot of the backend stuff, the weithers as it were."
+        yoshi "I'm a community manager, so I put together the awesome events Team Liquid hosts. I am by no means the face of Team Liquid, but rather doing a lot of the back stuff, the weithers as it were."
         yoshi "I work with the community management team developing events. My role is that of a moderator and event planner! I keep the Discord server running smoothly, and also run the official Team Liquid Minecraft server!"
         yoshi "It’s really wonderful being a community manager. {i}Being in the shadows, in the community, behind something you love.{/i}"
 
@@ -78,7 +89,7 @@ label start:
 
         image _user1 = "mod mg user 1.png"  # rickroll naruto
         image _user2 = "mod mg user 2.png"  # future minecraft esports
-        image _user3 = "mod mg user 3.png"  # free csgo skins
+        image _user3 = "mod mg user 3.png"  # fake doublelift scammer
         image _user4 = "mod mg user 4.png"  # rp mommy giftcard warn
         image _user5 = "mod mg user 5.png"  # bot ban
 
@@ -115,12 +126,77 @@ label start:
                 "Ban":
                     "How could you crush this person's dreams?! :("
         $ if not pass_q2: renpy.jump('_user2')
+        hide _user2 with pixellate
 
+        show _user3 at truecenter
+        $ pass_q3 = False
+        label _user3:
+            menu():
+                "Help":
+                    "Do you really think that's DoubleLift?"
+
+                "Warn":
+                    "Try again. Impersonation is really serious."
+
+                "Ban":
+                    "Yes, ban that impersonating scammer!!"
+                    $ pass_q3 = True
+
+        $ if not pass_q3: renpy.jump('_user3')
+        hide _user3 with pixellate
+
+        show _user4 at truecenter
+        $ pass_q4 = False
+        label _user4:
+            menu():
+                "Help":
+                    "Ummm, read the community guidelines again and think this through."
+
+                "Warn":
+                    "That person is begging for money and is kinda being creepy and sexualized which goes against our community rules!"
+                    "You could warn them but in this case, let’s go ahead and ban them."
+
+                "Ban":
+                    "Yep, this person needs to go. Let's keep the community safe and respectful."
+                    $ pass_q4 = True
+
+        $ if not pass_q4: renpy.jump('_user4')
+        hide _user4 with pixellate
+
+        show _user5 at truecenter
+        $ pass_q5 = False
+        label _user5:
+            menu():
+                "Help":
+                    "What?! Why don't you read the community guidelines again?"
+
+                "Warn":
+                    "Nope, see that blue tag?! It's a bot!!"
+
+                "Ban":
+                    "Grab that ban hammer and send that scammer to the shadow realm!"
+                    $ pass_q5 = True
+
+        $ if not pass_q5: renpy.jump('_user5')
+        hide _user5 with pixellate
+
+        # Finish all Q's
         scene bg slack at top
         with transition_circle_iris_out
         show yoshi smiling at center with dissolve:
             zoom 0.5
         yoshi "Wow, you did an amazing job! Thanks for all your help."
+        yoshi "Amazing work today. I hope you have a great night's rest."
+
+        scene black with dissolve
+
+        show text "Good job! You sleep for a few hours..." with dissolve
+        pause 3
+        with dissolve
+
+        hide text
+        "No more snoozing, it's time to get up!"
+
         jump meet_menu
     # MODERATION FIN --------------------------------------------------------
 
@@ -134,6 +210,8 @@ label start:
         show janet smiling at center with dissolve:
             zoom 0.5
 
+        janet "Oh hey, you want to talk more with me?"
+        janet "Well, I can tell you more about writing and marketing since I run tons of events and create lots of educational content."
         janet "Effective marketing campaigns and copywriting are all about being a good storyteller!"
 
         janet "It's about creating compelling narratives. Fun engagement about eSports teams, mascots, and more to build unique branding."
@@ -169,6 +247,18 @@ label start:
             "No thanks.":
                 janet "No worries. If you'd ever like to share later, just let me know!"
                 janet "If you'd like to see what others have written and get inspired, visit {a=https://twitter.com/TL_BlueBae}Twitter @TL_BlueBae{/a}."
+
+        # Finish all Q's
+        janet "Woah, look at the time. Work-life balance is important! I hope you have a great night's rest."
+
+        scene black with dissolve
+
+        show text "Well done on your assignment. You sleep and lose a few games of TFT..." with dissolve
+        pause 3
+        with dissolve
+
+        hide text
+        "Time to stop horsing around, it's a new workday!"
 
         jump meet_menu
         # CREATIVE WRITING POST FIN --------------------------------------------------------
