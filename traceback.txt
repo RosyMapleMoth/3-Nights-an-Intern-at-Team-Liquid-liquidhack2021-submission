@@ -1,42 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 212, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 514, in _execute_python_hide
-    renpy.load("_reload-2")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/script.rpy", line 70, in script
+    menu():
+  File "game/script.rpy", line 71, in <module>
+    "Zoe (Social Media)" if must_meet_zoe:
+NameError: name 'must_meet_zoe' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 212, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 504, in script
-    python hide:
-  File "renpy/ast.py", line 928, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2245, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 504, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 514, in _execute_python_hide
-    renpy.load("_reload-2")
-  File "renpy/loadsave.py", line 771, in load
-    log.unfreeze(roots, label="_after_load")
-  File "renpy/python.py", line 2200, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "renpy/python.py", line 2014, in rollback
-    self.load_failed()
-  File "renpy/python.py", line 1932, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/script.rpy", line 70, in script
+    menu():
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/ast.py", line 1688, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/exports.py", line 1028, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2276, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Alisa\Downloads\renpy-7.4.10-sdk/renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 71, in <module>
+    "Zoe (Social Media)" if must_meet_zoe:
+NameError: name 'must_meet_zoe' is not defined
 
-Windows-10-10.0.22489
+Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
-LiquidHacks2021 1.0
-Fri Nov 12 01:22:27 2021
+3 Nights an Intern @ Team Liquid 1.0
+Fri Nov 12 10:52:56 2021

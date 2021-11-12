@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("LiquidHacks2021")
+define config.name = _("3 Nights an Intern @ Team Liquid")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
