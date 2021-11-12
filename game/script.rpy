@@ -4,6 +4,7 @@
 define janet = Character("Janet")
 define yoshi = Character("Yoshi")
 define blue = Character("Blue (You)")
+define zoe = Character("Zoe")
 
 # Define Settings
 define gui.namebox_borders = Borders(5, 5, 5, 5)
@@ -68,13 +69,11 @@ label start:
 
         menu():
             "Zoe (Social Media)" if must_meet_zoe:
-                jump meet_menu
+                jump meme_maker
             "Yoshi (Community Management)" if must_meet_yoshi:
                 jump moderation_minigame
             "Janet (Marketing & Writing)" if must_meet_janet:
                 jump creative_post_minigame
-            "Meme Mini game test": 
-                jump meme_maker
             "I've met everyone!" if conclusion_activated:
                 jump conclusion
 
@@ -277,17 +276,50 @@ label start:
         $ must_meet_janet = False
         jump meet_menu
         # CREATIVE WRITING POST FIN --------------------------------------------------------
-
-
     label meme_maker:
         scene bg slack at top
         with pixellate
 
+        show zoe neutral at center with dissolve:
+            zoom 0.5
+        
+        zoe "I’m Zoe! I’m a cat! I use she/her/they/them/it/its pronouns."
 
-        "Tester" "Hello, this is so very exciting today we will be making a meme" 
+        ## added dialog make sure this is ok
+        blue "whha.. but you're a cat, are you sure your qualifed?"
+
+
+        zoe "Am I qualifed to running Team Liquids social media team?"
+        zoe "Oh honey{w}, I run the entire internet."
+        zoe "Why do you think cat videos are so popular on your tiktok feed? The only thing bigger than frogs on the internet are cats. Mmmmeow."
+        zoe "{cps=3 }...{/cps} That and I have a bachelors from an online university program in communication and have been photoshopping my face onto people for {i}years{/i} darling."
+
+        zoe "Getting my bachelors of arts definitely helped me get to where I meeeam today."
+
+        zoe "There’s not really any requirement to become a social media manager other than getting your bachelors and a lot of experience!"
+
+        zoe "Before joining Team Liquid, I was making League of Legends fan accounts posting memes on twitter, Who do you think inspired Yuumi?"
+
+        zoe "Eventually I got recognized for my work and was approached by the horse himself."
+
+        blue "Wow thats pretty inspiring how can I become like you? Is it hard?"
+
+        zoe "{i}Well... its not easy,{/i} but anyone can do it if they practice."
+
+        zoe "Why dob't we try it now!"
 
         call screen meme_maker_minigame_displayable
 
+        zoe "Oh wow you did a purrfect job making that meme!"
+
+        zoe "It was nice meeting you, but we best call it a day for now I need a cat nap"
+
+
+        scene black with dissolve
+
+        show text "Good job! You sleep for a few hours..." with dissolve
+        $ must_meet_zoe = True
+        jump meet_menu
 
         # CONCLUSION BEGINS --------------------------------------------------------
     label conclusion:
