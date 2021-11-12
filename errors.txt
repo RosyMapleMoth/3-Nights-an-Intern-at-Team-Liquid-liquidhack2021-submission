@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 869: u'gui' is not a keyword argument or valid child for the textbutton statement.
-    gui.interface_text_font = "fonts/sylfaen.ttf"
-       ^
+File "game/script.rpy", line 26: invalid syntax
+    OpenURL(https://careers.teamliquid.com/)
+                  ^
+    
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Fri Nov 12 12:28:11 2021
+Fri Nov 12 15:02:39 2021

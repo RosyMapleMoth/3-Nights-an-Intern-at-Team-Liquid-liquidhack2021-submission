@@ -23,6 +23,7 @@ init python:
 
 # The game starts below.
 label start:
+
     call screen preferences with pixellate
     play music gamemenu fadeout 1.0 fadein 1.0
 
@@ -46,13 +47,11 @@ label start:
 
     janet "Good morning Blue! Welcome to your first day at Team Liquid. My name is Janet, I use she/her pronouns, I am the EDU Esports Coordinator for TL!"
     janet "I cover most everything from our awesome hackathons to education events."
-    janet "I know you were wanting to become TL’s next competitive Minecraft player, but I think you’re really going to fit in here with the education team!"
-    janet "I'll also introduce you to some of the other awesome people in other teams and you can learn about other jobs here at TL and different careers in Esports."
-    janet "We are all about collaboration, cooperation, and fun here so please ask away if you have any questions!"
-    janet "Even though you’re going to be working with the education team, I’d encourage you to reach out to other people and ask them about their jobs!"
+    janet "Steve mentioned you were interested in not being a mascot at Team Liquid any more and wanted to explore others jobs!"
+    janet "We thought it would be a good idea to introduce you to a few different gamers who work here so you can learn about different career opportunities at Team Liquid and esports in general!"
     hide janet with dissolve
 
-    blue "\"Thanks Janet! I can't wait to meet everyone.\""
+    blue "Thanks Janet! I can't wait to meet everyone."
     $ must_meet_zoe = True
     $ must_meet_yoshi = True
     $ must_meet_janet = True
@@ -115,11 +114,13 @@ label start:
                     "But seriously, in general people should not click on links they don't recognize or trust."
 
                 "Warn":
-                    "Correct! If you click, it's a harmless {a=https://bit.ly/3kEltin}video{/a}. Telling a person to stop is good enough if community members get annoyed."
+                    "Correct! It's not good to click on links you don't recognize usually, but in this case, a community member was just playing around."
+                    "It was a harmless {a=https://bit.ly/3kEltin}Rick Roll video{/a}. Telling a person to stop is good enough if community members get annoyed."
                     $ pass_q1 = True
 
                 "Ban":
-                    "Banning is too harsh in this case. The {a=https://bit.ly/3kEltin}bit.ly link{/a} goes to a Rick Roll video and a warning can suffice if community members are annoyed."
+                    "I'd first actually check this person's server logs and check if they've ever caused trouble before or are just playing around. Banning could be too harsh in this case."
+                    "The {a=https://bit.ly/3kEltin}bit.ly link{/a} goes to a Rick Roll video and a warning can suffice if other community members are annoyed."
         $ if not pass_q1: renpy.jump('_user1')
         hide _user1 with pixellate
 
@@ -165,7 +166,7 @@ label start:
 
                 "Warn":
                     "That person is begging for money and is kinda being creepy and sexualized which goes against our community rules!"
-                    "You could warn them but in this case, let’s go ahead and ban them."
+                    "You could warn them, but in this case, you look up their message history on the server and see they've DM'ed everyone that message and also have caused trouble in the past..."
 
                 "Ban":
                     "Yep, this person needs to go. Let's keep the community safe and respectful."
@@ -282,67 +283,73 @@ label start:
 
         show zoe neutral at center with dissolve:
             zoom 0.5
-        
+
         zoe "I’m Zoe! I’m a cat! I use she/her/they/them/it/its pronouns."
 
         ## added dialog make sure this is ok
-        blue "whha.. but you're a cat, are you sure your qualifed?"
+        blue "Whha.. but you're a cat, are you sure you're qualifed?"
 
 
         zoe "Am I qualifed to running Team Liquids social media team?"
         zoe "Oh honey{w}, I run the entire internet."
-        zoe "Why do you think cat videos are so popular on your tiktok feed? The only thing bigger than frogs on the internet are cats. Mmmmeow."
+        zoe "Why do you think cat videos are so popular on your TikTok feed? The only thing bigger than frogs on the internet are cats. Mmmmeow."
         zoe "{cps=3 }...{/cps} That and I have a bachelors from an online university program in communication and have been photoshopping my face onto people for {i}years{/i} darling."
 
         zoe "Getting my bachelors of arts definitely helped me get to where I meeeam today."
 
         zoe "There’s not really any requirement to become a social media manager other than getting your bachelors and a lot of experience!"
 
-        zoe "Before joining Team Liquid, I was making League of Legends fan accounts posting memes on twitter, Who do you think inspired Yuumi?"
+        zoe "Before joining Team Liquid, I was making League of Legends fan accounts posting memes on Twitter, Who do you think inspired Yuumi?"
 
-        zoe "Eventually I got recognized for my work and was approached by the horse himself."
+        zoe "Eventually, I got recognized for my work and was approached by the horse himself."
 
-        blue "Wow thats pretty inspiring how can I become like you? Is it hard?"
+        blue "Wow, thats pretty inspiring how can I become like you? Is it hard?"
 
         zoe "{i}Well... its not easy,{/i} but anyone can do it if they practice."
 
-        zoe "Why dob't we try it now!"
+        zoe "Why don't we try it now!"
 
         call screen meme_maker_minigame_displayable
 
-        zoe "Oh wow you did a purrfect job making that meme!"
+        zoe "Oh wow, you did a purrfect job making that meme!"
 
-        zoe "It was nice meeting you, but we best call it a day for now I need a cat nap"
-
+        zoe "It was nice meeting you, but we best call it a day for now. I need a cat nap."
 
         scene black with dissolve
 
-        show text "Good job! You sleep for a few hours..." with dissolve
-        $ must_meet_zoe = True
+        show text "Well, today was an interesting day. How cool was it to meet Zoe!" with dissolve
+        pause 3
+        with dissolve
+
+        hide text
+        "Rise and shine, it's a new day."
+        $ must_meet_zoe = False
         jump meet_menu
 
         # CONCLUSION BEGINS --------------------------------------------------------
     label conclusion:
-        janet "Oh wow you've met a lot of people in your 3 days as an intern! I hope you learned a lot and had fun talking with some of the other departments."
+        janet "Oh wow, you've met a lot of people in your 3 days as an intern! I hope you learned a lot and had fun talking with some of the other departments."
         janet "You've done such a great job. You should apply on our {a=https://careers.teamliquid.com/}careers page{/a} so you can become #PaidBySteve too!"
 
         menu():
             "Let me submit my application right now!!":
                 janet "Wow, I love your enthusiasm. I'm so glad you had a good time on your internship!"
                 janet "Also, Blue?"
-                pause
                 janet "I just want you I'm really proud of you. You're not just a cute mastcot to me."
                 janet "You're so smart, and I think you can do anything you put your mind to."
                 janet "It's okay to not know what you want to do, and I'm glad you got to try out new things and find something new you're passionate about."
-                pause
-                show text "Janet sends you an e-hug gif..." with dissolve
+
+                scene black with dissolve
+                show text "Janet sends you an e-hug gif and a internship completion certicate..." with dissolve
                 pause 3
                 with dissolve
 
+                $ OpenURL('https://careers.teamliquid.com/')
+
                 hide text
                 "Congrats on beating the game!"
-                pause
-                "{i}3 Nights an Intern at Team Liquid{/i} was made by Bellbellum, Ocarune, Brekcut, and Moth for LiquidHacks 2.0. Thanks for playing!"
+                "{i}3 Nights an Intern at Team Liquid{/i} was made by Bellbellum, Ocarune, Brekcut, and Moth for LiquidHacks 2.0."
+                "Thanks for playing!"
 
             "Not right now, maybe later.":
                 janet "Ah, okay, no worries! If you ever want someone to review your resume, we sometimes hold job fairs and other events!"
@@ -350,8 +357,19 @@ label start:
                 hide janet with dissolve
 
                 # show Sarah's video
+                $ renpy.movie_cutscene("/videos/help_sarah.webm")
 
-                # more text here
+                scene black with dissolve
+                show text "Janet sends you an internship completion certicate." with dissolve
+                pause 3
+                with dissolve
+
+                hide text
+                "Congrats on beating the game!"
+                "{i}3 Nights an Intern at Team Liquid{/i} was made by Bellbellum, Ocarune, Brekcut, and Moth for LiquidHacks 2.0."
+                "Thanks for playing!"
+
+                $ OpenURL('https://careers.teamliquid.com/')
 
     # CONCLUSION FIN --------------------------------------------------------
 return
