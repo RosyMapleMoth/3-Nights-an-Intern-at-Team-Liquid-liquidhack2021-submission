@@ -6,6 +6,14 @@ __pycache__/
 # C extensions
 *.so
 
+# Renpy
+game/saves/*
+errors.txt
+log.txt
+traceback.txt
+
+
+
 # Distribution / packaging
 .Python
 build/
