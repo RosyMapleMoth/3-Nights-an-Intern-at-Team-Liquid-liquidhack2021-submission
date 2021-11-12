@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 42: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Zoe (Social Media Team)"
-                             ^
+File "game/script.rpy", line 36: expected statement.
+    "\"I have real legs!\" ~ Gamerhcp" with dissolve:
+                                       ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Thu Nov 11 17:29:17 2021
+Thu Nov 11 21:11:06 2021
