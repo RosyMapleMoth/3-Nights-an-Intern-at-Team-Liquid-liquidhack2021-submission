@@ -23,9 +23,9 @@ init python:
 # The game starts below.
 label start:
     play music gamemenu fadeout 1.0 fadein 1.0
-    
+
     call screen preferences with dissolve
-    
+
     scene black with dissolve
 
     show text "\"There's a reason why Team Liquid hires so many remote employees... \
@@ -53,6 +53,9 @@ label start:
     hide janet with dissolve
 
     blue "\"Thanks Janet! I can't wait to meet everyone.\""
+    $ must_meet_zoe = True
+    $ must_meet_yoshi = True
+    $ must_meet_janet = True
 
     label meet_menu:
         scene bg slack at top with transition_circle_iris_out
@@ -61,13 +64,18 @@ label start:
             zoom 0.5
 
         janet "Alright, who would you like to meet today?"
+
+        $ conclusion_activated = not (must_meet_zoe or must_meet_yoshi or must_meet_janet)
+
         menu():
-            "Zoe (Social Media)":
+            "Zoe (Social Media)" if must_meet_zoe:
                 jump meet_menu
-            "Yoshi (Community Management)":
+            "Yoshi (Community Management)" if must_meet_yoshi:
                 jump moderation_minigame
-            "Janet (Marketing & Writing)":
+            "Janet (Marketing & Writing)" if must_meet_janet:
                 jump creative_post_minigame
+            "I've met everyone!" if conclusion_activated:
+                jump conclusion
 
     # MODERATION MINIGAME --------------------------------------------------------
     label moderation_minigame:
@@ -200,6 +208,7 @@ label start:
         hide text
         "No more snoozing, it's time to get up!"
 
+        $ must_meet_yoshi = False
         jump meet_menu
     # MODERATION FIN --------------------------------------------------------
 
@@ -209,7 +218,7 @@ label start:
     label creative_post_minigame:
         scene bg slack at top
         with transition_circle_iris_out
-    
+
         show janet smiling at center with dissolve:
             zoom 0.5
 
@@ -264,7 +273,42 @@ label start:
         hide text
         "Time to stop horsing around, it's a new workday!"
 
+        $ must_meet_janet = False
         jump meet_menu
         # CREATIVE WRITING POST FIN --------------------------------------------------------
 
+
+        # CONCLUSION BEGINS --------------------------------------------------------
+        label conclusion:
+            janet "Oh wow you've met a lot of people in your 3 days as an intern! I hope you learned a lot and had fun talking with some of the other departments."
+            janet "You've done such a great job. You should apply on our {a=https://careers.teamliquid.com/}careers page{/a} so you can become #PaidBySteve too!"
+
+            menu():
+                "Let me submit my application right now!!":
+                    janet "Wow, I love your enthusiasm. I'm so glad you had a good time on your internship!")
+                    janet "Also, Blue?"
+                    pause
+                    janet "I just want you I'm really proud of you. You're not just a cute mastcot to me."
+                    janet "You're so smart, and I think you can do anything you put your mind to."
+                    janet "It's okay to not know what you want to do, and I'm glad you got to try out new things and find something new you're passionate about."
+                    pause
+                    show text "Janet sends you an e-hug gif..." with dissolve
+                    pause 3
+                    with dissolve
+
+                    hide text
+                    "Congrats on beating the game!"
+                    pause
+                    "{i}3 Nights an Intern at Team Liquid{/i} was made by Bellbellum, Ocarune, Brekcut, and Moth for LiquidHacks 2.0. Thanks for playing!"
+
+                "Not right now, maybe later."
+                    janet "Ah, okay, no worries! If you ever want someone to review your resume, we sometimes hold job fairs and other events!"
+                    janet "Alright, I'm off for a TFT break but I'll see you later. (PS Vex with Bramble is broken)"
+                    hide janet with dissolve
+
+                    # show Sarah's video
+
+                    # more text here
+
+        # CONCLUSION FIN --------------------------------------------------------
 return
