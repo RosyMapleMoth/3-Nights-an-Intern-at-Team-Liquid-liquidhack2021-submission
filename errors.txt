@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/minigames/creative_writing_displayable.rpy", line 18: u'add' is not a keyword argument or valid child for the add statement.
-    add img_btn_submit_tweet:
-       ^
+File "game/script.rpy", line 42: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Zoe (Social Media Team)"
+                             ^
 
 Ren'Py Version: Ren'Py 7.4.10.2178
-Thu Nov 11 02:04:11 2021
+Thu Nov 11 17:29:17 2021
