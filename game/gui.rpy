@@ -12,6 +12,7 @@ init python:
     gui.init(1280, 720)
 
 
+define gui.title_text_outlines = [ (0, "#00000034", 1, 1), (0, "#ffffffff", 2, 2) ]
 
 ################################################################################
 ## GUI Configuration Variables
@@ -470,6 +471,3 @@ init python:
 
         gui.nvl_button_width = 1240
         gui.nvl_button_xpos = 20
-
-
-

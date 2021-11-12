@@ -1,39 +1,157 @@
-Fri Nov 12 10:53:01 2021
+Fri Nov 12 12:08:52 2021
 Windows-10-10.0.19041
 Ren'Py 7.4.10.2178
  
 
-Bootstrap to the start of init.init took 0.08s
+Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
 Loader init took 0.03s
 Loading error handling took 0.03s
-Loading script took 0.24s
+Loading script took 0.35s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.07s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.02s
+
+File "game/screens.rpy", line 384: u'text_align' is not a keyword argument or valid child for the screen statement.
+    text_align 0.5
+              ^
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.01s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
+Interface start took 0.13s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 53.23s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.24s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 384: u'text_align' is not a keyword argument or valid child for the screen statement.
+    text_align 0.5
+              ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 53.85s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 384: u'text_align' is not a keyword argument or valid child for the screen statement.
+    text_align 0.5
+              ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 129.06s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 387: expected a keyword argument or end of line.
+    style: text_align 0.5
+         ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 129.79s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 387: expected a keyword argument or end of line.
+    style: text_align 0.5
+         ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 130.41s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 387: expected a keyword argument or end of line.
+    style: text_align 0.5
+         ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
 Interface start took 0.09s
 
 Initializing gl2 renderer:
@@ -45,4 +163,400 @@ Renderer: 'Radeon RX 570 Series'
 Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
 Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 137.05s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 388: Line is indented, but the preceding style statement does not expect a block. Please check this line's indentation.
+    text_align 0.5
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 137.72s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 388: Line is indented, but the preceding style statement does not expect a block. Please check this line's indentation.
+    text_align 0.5
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 151.46s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 388: Line is indented, but the preceding style statement does not expect a block. Please check this line's indentation.
+    text_align 0.5
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 152.14s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 388: Line is indented, but the preceding style statement does not expect a block. Please check this line's indentation.
+    text_align 0.5
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 238.99s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 388: Line is indented, but the preceding style statement does not expect a block. Please check this line's indentation.
+    text_align 0.5
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 239.62s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+
+File "game/screens.rpy", line 388: Line is indented, but the preceding style statement does not expect a block. Please check this line's indentation.
+    text_align 0.5
+    ^
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 272.00s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.34s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.07s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Alisa\\AppData\\Roaming/RenPy/backups\\liquidhack2021':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(2379, 1338) drawable=(2379, 1338)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Screen sizes: virtual=(1280, 720) physical=(2560, 1346) drawable=(2560, 1346)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1280, 720) physical=(2560, 1346) drawable=(2560, 1346)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 354.31s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Alisa\\AppData\\Roaming/RenPy/backups\\liquidhack2021':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1346) drawable=(2560, 1346)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 388.00s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Alisa\\AppData\\Roaming/RenPy/backups\\liquidhack2021':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.03s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1346) drawable=(2560, 1346)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Resetting cache.
+Bootstrap to the start of init.init took 412.51s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.07s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.500000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: "Couldn't load nvlib." (can be ignored)
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'ATI Technologies Inc.'
+Renderer: 'Radeon RX 570 Series'
+Version: '4.6.14831 Compatibility Profile Context 21.5.2 27.20.21003.8013'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(2560, 1346) drawable=(2560, 1346)
 Maximum texture size: 4096x4096

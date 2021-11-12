@@ -377,6 +377,58 @@ screen navigation():
             textbutton _("Quit") action Quit(confirm=not main_menu)
 
 
+# Custom Navigation
+define img_blue = "blue.gif"
+
+screen custom_navigation():
+
+    vbox:
+        style_prefix "custom_navigation"
+
+        xalign 0.5
+        ypos 525
+
+        spacing gui.navigation_spacing
+
+        if main_menu:
+
+            textbutton _("Start") action Start()
+
+        else:
+
+            #textbutton _("History") action ShowMenu("history")
+            textbutton _("Continue") action Return()
+
+            null height (2 * gui.pref_spacing)
+
+            textbutton _("Save") action ShowMenu("save")
+
+        textbutton _("Load") action ShowMenu("load")
+
+        #textbutton _("Preferences") action ShowMenu("preferences")
+
+        if _in_replay:
+
+            textbutton _("End Replay") action EndReplay(confirm=True)
+
+        elif not main_menu:
+            null height (2 * gui.pref_spacing)
+
+            textbutton _("Main Menu") action MainMenu()
+
+        #textbutton _("About") action ShowMenu("about")
+
+        #if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            #textbutton _("Help") action ShowMenu("help")
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            textbutton _("Quit") action Quit(confirm=not main_menu)
+
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
@@ -407,7 +459,13 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+
+    add img_blue:
+        xalign 0.5
+        ypos 200
+        zoom 0.6
+
+    use custom_navigation
 
     if gui.show_name:
 
@@ -417,7 +475,7 @@ screen main_menu():
             text "[config.name!t]":
                 style "main_menu_title"
 
-            text "[config.version]":
+            text "Version [config.version]":
                 style "main_menu_version"
 
 
@@ -431,14 +489,14 @@ style main_menu_frame:
     xsize 280
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    #background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
+    xalign 0.5
     xoffset -20
-    xmaximum 800
-    yalign 1.0
-    yoffset -20
+    xmaximum 1200
+    yalign 0.2
+    yoffset -30
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
@@ -546,6 +604,9 @@ style custom_return_frame:
     text_align 0.5
     xpos 25
     ypos 600
+
+style custom_navigation:
+    text_align 0.5
 
 style custom_mod_frame:
     background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
