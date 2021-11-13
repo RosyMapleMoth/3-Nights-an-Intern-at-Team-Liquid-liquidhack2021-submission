@@ -29,7 +29,7 @@ screen meme_maker_minigame_displayable():
 
     vbox:
         xpos 50 ypos 50 spacing 100
-        text 'Activity: Create a meme for our social media presense, click on the left or right side of the screen to change images, type out your caption when ready!':
+        text 'Activity: Create a meme for our social media presence, click on the left or right side of the screen to change images, type out your caption when ready!':
              color '#fff'
     viewport:
         ypos 450
@@ -53,7 +53,7 @@ init python:
             self.images = []
             self.imagesize = []
             for x in range(0,7):
-                self.images.append(Image(THIS_PATH + IMG_DIR + MEM_IMG_NAME + str(x+1) + '.png', xcenter=600, ycenter=400,))
+                self.images.append(Image(THIS_PATH + IMG_DIR + MEM_IMG_NAME + str(x+1) + '.png', xcenter=600, ycenter=400,  alt="cat"))
                 Transform(self.images[x], 0.5)
 
 

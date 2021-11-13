@@ -3,7 +3,7 @@
 # Define Characters Below
 define janet = Character("Janet")
 define yoshi = Character("Yoshi")
-define blue = Character("Blue (You)")
+define blue = Character("Blue")
 define zoe = Character("Zoe")
 
 # Define Settings
@@ -286,18 +286,18 @@ label start:
             zoom 0.5
 
         zoe "I’m Zoe! I’m a cat! I use she/her/they/them/it/its pronouns."
-        blue "Whha.. but you're a cat, are you sure you're qualifed?"
+        blue "Whha.. but you're a cat, are you sure you're qualified?"
 
-        zoe "Am I qualifed to running Team Liquids social media team?"
+        zoe "Am I qualified to run Team Liquid's social media team?"
         zoe "Oh honey{w}, I run the entire internet."
         zoe "Why do you think cat videos are so popular on your TikTok feed? The only thing bigger than frogs on the internet are cats. Mmmmeow."
         zoe "{cps=3 }...{/cps} That and I have a bachelors from an online university program in communication and have been photoshopping my face onto people for {i}years{/i} darling."
 
-        zoe "Getting my bachelors of arts definitely helped me get to where I meeeam today."
+        zoe "Getting my bachelors of arts definitely helped me get to where I am today."
 
         zoe "There’s not really any requirement to become a social media manager other than getting your bachelors and a lot of experience!"
 
-        zoe "Before joining Team Liquid, I was making League of Legends fan accounts posting memes on Twitter, Who do you think inspired Yuumi?"
+        zoe "Before joining Team Liquid, I was making League of Legends fan accounts posting memes on Twitter, Who do you think inspired {noalt}Yuumi{/noalt}{alt}you me{/alt}?"
 
         zoe "Eventually, I got recognized for my work and was approached by the horse himself."
 
@@ -305,13 +305,13 @@ label start:
 
         zoe "{i}Well... its not easy,{/i} but anyone can do it if they practice."
 
-        zoe "Why don't we try it now!"
+        zoe "Why don't you try making a meme, for practice!"
 
         play music minigametrack2 fadeout 1.0 fadein 1.0
 
         call screen meme_maker_minigame_displayable
 
-        zoe "Oh wow, you did a purrfect job making that meme!"
+        zoe "Oh wow, you did a {noalt}purrfect{/noalt}{alt}purr fect{/alt} job making that meme!"
 
         zoe "It was nice meeting you, but we best call it a day for now. I need a cat nap."
 
@@ -325,6 +325,7 @@ label start:
         "Rise and shine, it's a new day."
         $ must_meet_zoe = False
         jump meet_menu
+
 
         # CONCLUSION BEGINS --------------------------------------------------------
     label conclusion:
